@@ -1,0 +1,127 @@
+// 工作台
+.workplace {
+    .header {
+        background: #fff;
+        width: 100%;
+        padding: 16px 24px;
+        box-sizing: border-box;
+        line-height: 1.5;
+        &_title {
+            color: rgba(0, 0, 0, .85);
+            font-size: 16px;
+            line-height: 1.4;
+            font-weight: 700;
+        }
+        &_con {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 12px;
+            margin-bottom: 16px;
+            .header_l {
+                .avatar {
+                    width: 72px;
+                    height: 72px;
+                    border-radius: 50%;
+                    display: block;
+                }
+            }
+            .header_m {
+                flex: 1;
+                margin-left: 24px;
+                &_t {
+                    font-size: 20px;
+                    margin-bottom: 12px;
+                    font-weight: 500;
+                    color: rgba(0, 0, 0, .85);
+                }
+                &_b {
+                    color: rgba(0, 0, 0, .45);
+                }
+            }
+            .header_r {
+                display: flex;
+                min-width: 242px;
+                &_item {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 0 32px;
+                    position: relative;
+                    align-items: flex-end;
+                    &:not(:last-child)::after {
+                        position: absolute;
+                        top: 8px;
+                        right: 0;
+                        width: 1px;
+                        height: 40px;
+                        background: #e8e8e8;
+                        content: '';
+                    }
+                    .item_tit {
+                        margin-bottom: 4px;
+                        color: rgba(0, 0, 0, .45);
+                    }
+                    .item_txt {
+                        font-size: 24px;
+                        color: rgba(0, 0, 0, .85);
+                        font-weight: 500;
+                        .suffix {
+                            font-size: 14px;
+                            margin-left: 4px;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .card {
+        cursor: pointer;
+        &_header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            .card_avatar {
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                display: block;
+            }
+            .card_title {
+                margin-left: 12px;
+                color: rgba(0, 0, 0, .85);
+            }
+        }
+        &_con {
+            height: 44px;
+            overflow: hidden;
+            color: rgba(0, 0, 0, .45);
+            margin-bottom: 8px;
+        }
+        &_footer {
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+            justify-content: space-between;
+            .card_name {
+                flex: 1;
+                color: rgba(0, 0, 0, .45);
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                word-break: break-all;
+            }
+            .card_date {
+                color: rgba(0, 0, 0, .25);
+            }
+        }
+    }
+    .quick_card {
+        .card_btn {
+            display: inline-block;
+            width: 25%;
+            margin-bottom: 13px;
+            color: rgba(0, 0, 0, .65);
+        }
+    }
+}
