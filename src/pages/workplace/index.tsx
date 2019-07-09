@@ -48,6 +48,19 @@ class Workplace extends React.Component {
                 date: '14分钟前'
             }
         ]
+        let cardList = list.map((item, index) => (
+            <Card.Grid key={index}>
+                <div className="card_header">
+                    <img className="card_avatar" src={item.avatar} />
+                    <span className="card_title">{item.title}</span>
+                </div>
+                <div className="card_con">{item.content}</div>
+                <div className="card_footer">
+                    <span className="card_name">{item.name}</span>
+                    <span className="card_date">{item.date}</span>
+                </div>
+            </Card.Grid>
+        ))
         return (
             <div className="workplace">
                 <div className="header">
@@ -79,19 +92,7 @@ class Workplace extends React.Component {
                     <Row type="flex" justify="space-between" gutter={16}>
                         <Col span={16}>
                             <Card title="进行中的项目" className="card" extra={<a href="#">全部项目</a>}>
-                                {list.map(item => (
-                                    <Card.Grid>
-                                        <div className="card_header">
-                                            <img className="card_avatar" src={item.avatar} />
-                                            <span className="card_title">{item.title}</span>
-                                        </div>
-                                        <div className="card_con">{item.content}</div>
-                                        <div className="card_footer">
-                                            <span className="card_name">{item.name}</span>
-                                            <span className="card_date">{item.date}</span>
-                                        </div>
-                                    </Card.Grid>
-                                ))}
+                                {cardList}
                             </Card>
                         </Col>
                         <Col span={8}>
