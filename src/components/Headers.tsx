@@ -30,7 +30,8 @@ class Headers extends React.Component<IHeadersProps, any> {
                 <Icon
                     className="trigger"
                     type={collapsed ? 'menu-unfold' : 'menu-fold'}
-                    onClick={this.toggle} />
+                    onClick={this.toggle}
+                />
             </Header>
         )
     }

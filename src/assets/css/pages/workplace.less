@@ -75,44 +75,76 @@
             }
         }
     }
-    .card {
+    .product_card {
         cursor: pointer;
-        &_header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 8px;
-            .card_avatar {
-                width: 24px;
-                height: 24px;
-                border-radius: 50%;
-                display: block;
+        .card {
+            &_header {
+                display: flex;
+                align-items: center;
+                margin-bottom: 8px;
+                .card_avatar {
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    display: block;
+                }
+                .card_title {
+                    margin-left: 12px;
+                    color: rgba(0, 0, 0, .85);
+                } 
             }
-            .card_title {
-                margin-left: 12px;
-                color: rgba(0, 0, 0, .85);
-            }
-        }
-        &_con {
-            height: 44px;
-            overflow: hidden;
-            color: rgba(0, 0, 0, .45);
-            margin-bottom: 8px;
-        }
-        &_footer {
-            display: flex;
-            align-items: center;
-            font-size: 12px;
-            justify-content: space-between;
-            .card_name {
-                flex: 1;
-                color: rgba(0, 0, 0, .45);
+            &_con {
+                height: 44px;
                 overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                word-break: break-all;
+                color: rgba(0, 0, 0, .45);
+                margin-bottom: 8px;
             }
-            .card_date {
-                color: rgba(0, 0, 0, .25);
+            &_footer {
+                display: flex;
+                align-items: center;
+                font-size: 12px;
+                justify-content: space-between;
+                .card_name {
+                    flex: 1;
+                    color: rgba(0, 0, 0, .45);
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    word-break: break-all;
+                }
+                .card_date {
+                    color: rgba(0, 0, 0, .25);
+                }
+            }
+        }
+    }
+    .dynamic_card {
+        .ant-card-body {
+            padding: 0 24px;
+            .card_con {
+                padding: 16px 0;
+                display: flex;
+                border-bottom: 1px solid #e8e8e8;
+                &_l {
+                    margin-right: 16px;
+                    .avatar {
+                        width: 32px;
+                        height: 32px;
+                        border-radius: 50%;
+                        display: block;
+                    }
+                }
+                &_r {
+                    .tit {
+                        color: rgba(0, 0, 0, .65);
+                        span {
+                            color: #1890ff;
+                        }
+                    }
+                    .date {
+                        color: rgba(0, 0, 0, .25);
+                    }
+                }
             }
         }
     }
@@ -122,6 +154,27 @@
             width: 25%;
             margin-bottom: 13px;
             color: rgba(0, 0, 0, .65);
+        }
+    }
+    .team_card {
+        .ant-card-body {
+            display: flex;
+            flex-flow: row wrap;
+            .team_item {
+                display: flex;
+                align-items: center;
+                margin: 12px 0;
+                .avatar {
+                    width: 24px;
+                    height: 24px;
+                    display: block;
+                    border-radius: 50%;
+                    margin-right: 12px;
+                }
+                .title {
+                    color: rgba(0, 0, 0, .65);
+                }
+            }
         }
     }
 }

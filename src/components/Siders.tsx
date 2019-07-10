@@ -14,16 +14,16 @@ class Siders extends React.Component<ISidersProps, any> {
     render () {
         let collapsed = this.props.collapsed
         return (
-            <Sider trigger={null} width="256" collapsible collapsed={collapsed}>
+            <Sider trigger={null} width="256" collapsible={true} collapsed={collapsed}>
                 <div className="logo" />
                 <Menu theme="dark" mode="inline" defaultSelectedKeys={['/workplace']} onClick={this.goUrl}>
                     <Menu.Item key="/workplace">
                         <Icon type="user" />
                         <span>工作台</span>
                     </Menu.Item>
-                    <Menu.Item key="2">
+                    <Menu.Item key="/monitor">
                         <Icon type="video-camera" />
-                        <span>nav 2</span>
+                        <span>监控台</span>
                     </Menu.Item>
                     <Menu.Item key="3">
                         <Icon type="upload" />
