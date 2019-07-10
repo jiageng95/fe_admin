@@ -8,7 +8,7 @@ import '../assets/css/layouts/index.less';
 
 const { Content } = Layout;
 
-class BasicLayout extends React.Component {
+class BasicLayout extends React.Component<any> {
   state = {
     collapsed: false
   }
@@ -33,5 +33,4 @@ class BasicLayout extends React.Component {
     )
   }
 }
-
 export default BasicLayout;
