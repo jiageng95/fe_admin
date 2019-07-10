@@ -1,0 +1,30 @@
+.headers {
+    padding: 0;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .headers_r {
+        padding-right: 24px;
+        .user {
+            padding: 0 12px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            .avatar {
+                width: 24px;
+                height: 24px;
+                display: block;
+                border-radius: 50%;
+                margin-right: 8px;
+            }
+            .username {
+                max-width: 100px;
+                display: inline-block;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+    }
+}

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Layout, Icon } from 'antd';
+import { Layout, Icon, Menu, Dropdown } from 'antd';
+import '../assets/css/components/headers.less'
 const { Header } = Layout;
 
 interface IHeadersProps extends React.Props<any> {
@@ -25,13 +26,38 @@ class Headers extends React.Component<IHeadersProps, any> {
     }
     render () {
         let collapsed = this.props.collapsed
+        let menu = (
+            <Menu className="drop_menu">
+                <Menu.Item>
+                    <Icon type="user" />
+                    个人中心
+                </Menu.Item>
+                <Menu.Item>
+                    <Icon type="setting" />
+                    个人设置
+                </Menu.Item>
+                <Menu.Divider />
+                <Menu.Item>
+                    <Icon type="logout" />
+                    退出登录
+                </Menu.Item>
+            </Menu>
+        );
         return (
-            <Header style={{ background: '#fff', padding: 0 }}>
+            <Header className="headers">
                 <Icon
                     className="trigger"
                     type={collapsed ? 'menu-unfold' : 'menu-fold'}
                     onClick={this.toggle}
                 />
+                <div className="headers_r">
+                    <Dropdown overlay={menu} placement="bottomLeft">
+                        <div className="user">
+                            <img className="avatar" src="https://gw.alipayobjects.com/zos/antfincdn/XAosXuNZyF/BiazfanxmamNRoxxVxka.png" />
+                            <span className="username">Chris</span>
+                        </div>
+                    </Dropdown>
+                </div>
             </Header>
         )
     }
