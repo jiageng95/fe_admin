@@ -1,5 +1,56 @@
 .analysis {
+    .con_m_item {
+        display: flex;
+        margin-right: 16px;
+        align-items: center;
+        .txt {
+            margin: 0 8px;
+        }
+    }
+    .charts_item {
+        display: inline-block;
+        width: 100%;
+        position: relative;
+        bottom: -10px;
+        transform: scale(1.05);
+    }
     .visit_card {
         height: 400px;
+        .charts_tit {
+            color: rgba(0, 0, 0, .85);
+            font-weight: 500;
+            margin-bottom: 20px;
+            line-height: 1;
+        }
+        .ranking_list {
+            .list_item {
+                margin-top: 16px;
+                display: flex;
+                align-items: center;
+                .item_index {
+                    width: 20px;
+                    height: 20px;
+                    display: inline-block;
+                    margin-right: 16px;
+                    background: #314659;
+                    font-size: 12px;
+                    font-weight: 600;
+                    border-radius: 50%;
+                    color: #fff;
+                    text-align: center;
+                }
+                .item_name {
+                    color: rgba(0, 0, 0, .65);
+                    flex: 1;
+                    margin-right: 8px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                .item_rank {
+                    color: rgba(0, 0, 0, .65);
+                }
+            }
+        }
     }
 }
