@@ -1,10 +1,12 @@
 .analysis {
     .con_m_item {
         display: flex;
-        margin-right: 16px;
         align-items: center;
+        &:not(:last-child) {
+            margin-right: 2%;
+        }
         .txt {
-            margin: 0 8px;
+            margin: 0 4px;
         }
     }
     .charts_item {
@@ -12,7 +14,7 @@
         width: 100%;
         position: relative;
         bottom: -10px;
-        transform: scale(1.05);
+        transform: scale(1.02);
     }
     .visit_card {
         height: 400px;

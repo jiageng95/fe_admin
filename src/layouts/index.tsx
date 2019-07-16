@@ -13,7 +13,7 @@ class BasicLayout extends React.Component<any> {
     collapsed: false
   }
 
-  toggle = (collapsed: Boolean) => {
+  toggle = (collapsed: boolean) => {
     this.setState({
       collapsed
     })
