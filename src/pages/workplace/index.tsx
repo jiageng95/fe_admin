@@ -179,7 +179,7 @@ class Workplace extends React.Component {
                         </div>
                         <div className="header_m">
                             <p className="header_m_t">早安，Chris，祝你健康富有开心每一天！</p>
-                            <p className="header_m_b">史上最强全栈大佬</p>
+                            <p className="header_m_b">这个人很懒, 什么都没写~</p>
                         </div>
                         <div className="header_r">
                             <div className="header_r_item">
